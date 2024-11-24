@@ -1,0 +1,220 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+}
+/* styles for font-family    */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* body predefine styles  */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--light-color);
+}
+
+/* Global styles for background */
+.background__site {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("./images/gta6.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+/* overlay styles for background */
+.background__site::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.539) 20%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
+
+/* count box styles  */
+.countdown_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+}
+
+.countdown__title {
+  font-size: 3.4rem;
+  font-weight: bold;
+  color: #ffffffcb;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.countdown_subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffffcb;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.countdown_text {
+  font-weight: lighter;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* clock styles   */
+.clock {
+  display: grid;
+  place-content: center;
+  grid-gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #33333318;
+  padding: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin: 10px;
+}
+
+.indicators_clock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.indicators{
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 10px;
+}
+
+.numbers_clock_box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 10px;
+}
+
+.numbers{
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .countdown_box {
+    font-size: 4rem;
+  }
+
+  .countdown__title {
+    font-size: 3rem;
+  }
+
+  .countdown_subtitle {
+    font-size: 1.8rem;
+  }
+
+  .countdown_text {
+    font-size: 1.5rem;
+  }
+
+  .clock {
+    font-size: 1.2rem;
+  }
+
+  .indicators_clock {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown_box {
+    font-size: 3rem;
+  }
+
+  .countdown__title {
+    font-size: 2.5rem;
+  }
+
+  .countdown_subtitle {
+    font-size: 1.5rem;
+  }
+
+  .countdown_text {
+    font-size: 1.2rem;
+  }
+
+  .clock {
+    font-size: 1rem;
+  }
+
+  .indicators_clock {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown_box {
+    font-size: 2rem;
+  }
+
+  .countdown__title {
+    font-size: 2rem;
+  }
+
+  .countdown_subtitle {
+    font-size: 1.2rem;
+  }
+
+  .countdown_text {
+    font-size: 1rem;
+  }
+
+  .clock {
+    font-size: 0.8rem;
+  }
+
+  .indicators_clock {
+    width: 200px;
+  }
+}
